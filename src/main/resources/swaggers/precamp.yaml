@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  title: arithmethic
+  version: '1.0'
+  description: pre-assessment for bootcamp
+  contact:
+    name: Gang Duan
+    email: gang.duan@t-mobile.com
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/adder/{numberOne}/{numberTwo}':
+    parameters:
+      - schema:
+          type: string
+        name: numberOne
+        in: path
+        required: true
+      - schema:
+          type: string
+        name: numberTwo
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sum:
+                    type: string
+      operationId: get-addition-numberOne-numberTwo
+      description: add two numbers
+      tags:
+        - addition
+  '/add-ten/{number}':
+    get:
+      summary: Your GET endpoint
+      tags:
+        - addition
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sum:
+                    type: string
+      operationId: get-add-ten
+      description: add 10 to the given number
+    parameters:
+      - schema:
+          type: string
+        name: number
+        in: path
+        required: true
+components:
+  schemas: {}
+tags:
+  - name: addition
