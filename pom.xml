@@ -104,25 +104,7 @@
 								<apiPackage>com.example.demo.api</apiPackage>
 							</configuration>
 						</execution>
-						<!-- <execution>
-							<id>po</id>
-							<goals>
-								<goal>generate</goal>
-							</goals>
-							<configuration>
-								<inputSpec>${project.basedir}/src/main/resources/swaggers/precamp.yaml</inputSpec>
-								<language>java</language>
-								<modelPackage>com.tmobile.om.client.precamp.models</modelPackage>
-								<apiPackage>com.tmobile.om.client.precamp.interfaces</apiPackage>
-								<generateApis>true</generateApis>
-								<generateModels>true</generateModels>
-								<configOptions>
-									<dateLibrary>java8</dateLibrary>
-									<sourceFolder>src/main/java</sourceFolder>
-									<library>resttemplate</library>
-								</configOptions>
-							</configuration>
-						</execution> -->
+
 					</executions>
 				</plugin>
 				<plugin>
